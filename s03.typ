@@ -1,6 +1,6 @@
 // Datum: 09.11.2026
 
-=== Rechenbeispiel 4
+=== Rechenbeispiel 3
 / geg.: $U_"eff" = 3 "V"$
 / ges.: $L_u = "?" "dBu"$
 / ges.: $L_u = "?" "dBV"$
@@ -11,7 +11,7 @@ $ L_u = 20 dot lg(U_"eff"/U_0) = 20 dot lg(3/1) = 9,54 "dBV" $
 $ P = U^2/R = (3 "V")^2/(50 Omega) = 0,18 "W" = 180 "mW" $
 $ L_p = 10 dot lg(P/P_0) = 10 dot lg((0,18 "W")/(0,001 "W")) = 10 dot lg((180 "mW")/(1 "mW")) = 22,55 "dBm" $
 
-=== Rechenbeispiel 5
+=== Rechenbeispiel 4
 Ein Verstärker mit einer Ausgangsleistung von $200 "W"$ benötigt eine Steuerleistung (Eingangsleistung) von $50 "mW"$. \
 Wie groß ist die Verstärkung?
 / a): als Faktor $P_"out"/P_"in" = "?"$
@@ -27,7 +27,7 @@ $ v_p = 10 dot lg(P_"out"/P_"in") = 10 dot lg(4000) approx underline(36\,02 "dB"
 
 // TODO: 1.3 vom Zettel hier einfügen
 
-=== Rechenbeispiel 6
+=== Rechenbeispiel 5
 In einer langen Übertragungsleitung sind insgesamt 5 Verstärker mit jeweils $23 "dB"$ Verstärkung eingebaut.
 Trotzdem können von den eingespeisten $5 "W"$ mit $250 "mW"$ Leistungs... aus
 // TODO: Satz oben vervollständigen
