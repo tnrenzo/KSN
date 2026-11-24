@@ -1,8 +1,8 @@
 // Datum: 09.11.2026
 
-= Wichtige Pegelgrößen
+== Wichtige Pegelgrößen
 
-== Wichtige Pegel von Leistungen
+=== Wichtige Pegel von Leistungen
 $
    0 "dB" & eq.est "Faktor" 1 \
    3 "dB" & eq.est "Faktor" 2 \
@@ -11,7 +11,7 @@ $
   10 "dB" & eq.est "Faktor" 10
 $
 
-== Wichtige Pegel von Spannungen
+=== Wichtige Pegel von Spannungen
 $
    0 "dB" & eq.est "Faktor" 1 \
    3 "dB" & eq.est "Faktor" sqrt(2) \
@@ -20,7 +20,7 @@ $
   20 "dB" & eq.est "Faktor" 10
 $
 
-== Rechenbeispiel 1
+=== Rechenbeispiel 1
 / geg.: $L_u = 20 "dBµV"$
 / ges.: Welcher Effektivwert $U_"eff"$ entspricht diesem Pegel?
 
@@ -32,7 +32,7 @@ $
           &= 1 "µV" dot 10^(20\/20) = underline(10 "µV")
 $
 
-== Rechenbeispiel 2
+=== Rechenbeispiel 2
 / geg.: $L_u = 10 "dBu"$
 / ges.: $U_"eff" = "?"$ #h(1em) sowie #h(1em) $L_u$ in $"dBV" = "?"$
 
