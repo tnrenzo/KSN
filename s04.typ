@@ -1,6 +1,6 @@
 // Datum: 23.11.2026
 
-=== Rechenbeispiel 6
+=== Rechenbeispiel 7
 Die Dämpfung einer Leistung beträgt $-56 "dB"$.
 Welche Leistung muss eingespeist werden, damit am Leitungsende eine Spannung
 von $1 "mV"$ den Empfänger mit $50 Omega$ Eingangswiderstand erreicht?

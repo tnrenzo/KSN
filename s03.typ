@@ -6,10 +6,10 @@
 / ges.: $L_u = "?" "dBV"$
 / ges.: $L_p = "?" "dBm"$ wenn $U_"eff" = 3 "V"$ an $R = 50 Omega$ anliegt.
 
-$ L_u = 20 dot lg(U_"eff"/U_0) = 20 dot lg(3/(0,7746)) = 11,76 "dBu" $
+$ L_u = 20 dot lg(U_"eff"/U_0) = 20 dot lg(3/(0,7746)) approx 11,76 "dBu" $
 $ L_u = 20 dot lg(U_"eff"/U_0) = 20 dot lg(3/1) = 9,54 "dBV" $
 $ P = U^2/R = (3 "V")^2/(50 Omega) = 0,18 "W" = 180 "mW" $
-$ L_p = 10 dot lg(P/P_0) = 10 dot lg((0,18 "W")/(0,001 "W")) = 10 dot lg((180 "mW")/(1 "mW")) = 22,55 "dBm" $
+$ L_p = 10 dot lg(P/P_0) = 10 dot lg((0,18 "W")/(0,001 "W")) = 10 dot lg((180 "mW")/(1 "mW")) approx underline(22\,55 "dBm") $
 
 === Rechenbeispiel 4
 Ein Verstärker mit einer Ausgangsleistung von $200 "W"$ benötigt eine Steuerleistung (Eingangsleistung) von $50 "mW"$. \
@@ -23,11 +23,19 @@ $ P_"out"/P_"in" = (200 "W")/(50 dot 10^(-3) "W") = 4000 $
 *b)* Leistungsverstärkung in dB:
 $ v_p = 10 dot lg(P_"out"/P_"in") = 10 dot lg(4000) approx underline(36\,02 "dB") $
 
-// TODO: 1.2 vom Zettel hier einfügen
-
-// TODO: 1.3 vom Zettel hier einfügen
-
 === Rechenbeispiel 5
+Am Anfang einer Übertragungsleitung liegen $80 "mV"$ an.
+Am Ende noch $500 mu"V"$. Wie groß ist die Dämpfung?
+
+$
+  v_p = 10 dot lg((500 mu"V")/(80 "mV")) approx 6\,75 dot 10^(-3)
+$
+
+$
+  L_p = 20 dot lg(v_p) approx underline(44\,08 "dB")
+$
+
+=== Rechenbeispiel 6
 In einer langen Übertragungsleitung sind insgesamt 5 Verstärker mit jeweils $23 "dB"$ Verstärkung eingebaut.
 Trotzdem können von den eingespeisten $5 "W"$ mit $250 "mW"$ Leistungs... aus
 // TODO: Satz oben vervollständigen
