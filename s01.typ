@@ -42,7 +42,7 @@ Verhältnis von Aus- zu Eingangsspannung (z.B.: Übertragungsfunktion)
 
 $ v_u = u_a/u_e => "dimensionslos, Einheit kürzt sich" $
 
-$ v_p = P_a/P_e = v_u^2 quad "(bei gleichem Ein- und Ausgangswiderstand)" $
+$ v_P = P_a/P_e = v_u^2 quad "(bei gleichem Ein- und Ausgangswiderstand)" $
 
 Der Pegel ist logarithmisch (englisch: "Level") mit dem Formelzeichen $L$ und der Einheit Bel $"B"$. \
 *Das Bel ist für das Verhältnis von Leistungen definiert!* \
