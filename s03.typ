@@ -1,4 +1,5 @@
 // Datum: 09.11.2026
+#import "@preview/zap:0.6.0"
 
 === Rechenbeispiel 3
 / geg.: $U_"eff" = 3 "V"$
@@ -40,6 +41,35 @@ Trotzdem können von den eingespeisten $5 "W"$ mit $250 "mW"$ Leistungs... aus
 / c): Wie groß wäre die Leistung am Empfänger ohne die 5 Verstärker?
 
 / geg.: $P_1 = 5 "W"$, #h(0.5em) $P_2 = 0,25 "W"$
+
+#figure(
+  zap.circuit({
+    import zap: *
+    import cetz.draw: *
+
+    // sender
+    rect((0, -0.5), (1.8, 0.5), name: "tx")
+    content("tx", [Sender])
+    content((0.9, -0.9), $P_1 = 5 "W"$)
+
+    // leitung mit 5 verstärkern
+    let x0 = 1.8
+    for k in range(5) {
+      let x = 2.9 + k * 1.9
+      line((x0, 0), (x - 0.35, 0))
+      line((x - 0.35, 0.45), (x - 0.35, -0.45), (x + 0.45, 0), close: true)
+      content((x, 0.8), text(0.85em, $+23 "dB"$))
+      x0 = x + 0.45
+    }
+    line((x0, 0), (x0 + 0.6, 0))
+
+    // empfänger
+    rect((x0 + 0.6, -0.5), (x0 + 2.8, 0.5), name: "rx")
+    content("rx", [Empfänger])
+    content((x0 + 1.7, -0.9), $P_2 = 250 "mW"$)
+  }),
+  caption: [Übertragungsleitung mit 5 Verstärkern],
+)
 
 *a)* Dämpfung mit Verstärkern:
 $ a_"ges" = 10 dot lg((0,25 "W")/(5 "W")) = -13 "dB" $
