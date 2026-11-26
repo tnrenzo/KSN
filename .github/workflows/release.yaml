@@ -1,0 +1,49 @@
+name: Build master.pdf
+
+on:
+  push:
+    branches: ["**"]
+    tags: ["v*"]
+  workflow_dispatch:
+
+# Cancel an in-progress build when you push again to the same ref.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write # needed to create/update the release on tag pushes
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: typst-community/setup-typst@v5
+        with:
+          #typst-version: latest
+          typst-version: ^0.15.1
+
+      - name: Compile master.pdf
+        run: typst compile master.typ master.pdf --font-path fonts
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: master-pdf
+          path: master.pdf
+          if-no-files-found: error
+
+      - name: Attach master.pdf to release
+        if: startsWith(github.ref, 'refs/tags/v')
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
+            gh release upload "$GITHUB_REF_NAME" master.pdf --clobber
+          else
+            gh release create "$GITHUB_REF_NAME" master.pdf \
+              --title "$GITHUB_REF_NAME" \
+              --generate-notes
+          fi
